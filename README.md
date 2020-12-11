@@ -17,7 +17,9 @@ Since this is my first ASP.NET Core Web Application w/ Angular project, in betwe
 All this will come more fluidly with time and experience.
 - start visual studio boilerplate project for ASP.NET Core Web Application/Angular project
 
-Back-End
+## Baseline Implementation
+
+### Back-End
 - build models for jobs/candidates
 - build service to connect to jobadder api
 - build api controller to get jobs/candidates from service
@@ -29,8 +31,7 @@ Back-End
 - implement algorithm to find best candidate for job
   - most likely the sum of the interaction of job skills and candidate skills modified by the jobskillsweight
 
-
-Front-End
+### Front-End
 - two-column layout (30/70 responsive layout), with header probably.
 - three major components
   - jobskillsweight modifer: allows a recruiter to change values of skills
@@ -40,3 +41,6 @@ Front-End
     - ordered by the algorithm decending.
     - visual helper: green skill tags for matching, red for no match
     
+Improvements
+- [x] candidate skills tags has duplicate data, clean up, use another property.
+- [] make jobadder service url configurable per environment.

@@ -28,8 +28,6 @@ namespace JobAdderTest
                 c.BaseAddress = new Uri("https://private-anon-1ae67e1e92-jobadder1.apiary-mock.com/");
             });
 
-            //services.AddTransient<HttpClient>();
-
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
