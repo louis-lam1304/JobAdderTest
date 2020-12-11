@@ -23,8 +23,8 @@ All this will come more fluidly with time and experience.
 - build models for jobs/candidates
 - build service to connect to jobadder api
 - build api controller to get jobs/candidates from service
-- build repo for jobskillsweight
-  - json file with all the skills on the jobs
+- build data repo for jobskillsweight
+  - static json file with all the skills on the jobs
   - using this json file primarly as a database. 
   - allow this file to be read/write
 - build models/controllers/services for jobskillsweight
@@ -43,4 +43,6 @@ All this will come more fluidly with time and experience.
     
 ### Improvements
 - [x] candidate skills tags has duplicate data, clean up, use another property.
-- [] make jobadder service url configurable per environment.
+- [ ] make jobadder service url configurable per environment.
+- [ ] generate jobskillweights.json dynamically if it does not exist.
+- [ ] remove candidates from match feed if jobWeight = 0

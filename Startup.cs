@@ -29,6 +29,7 @@ namespace JobAdderTest
             });
 
             services.AddTransient<JobSkillWeightService>();
+            services.AddTransient<IMatchService, MatchService>();
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

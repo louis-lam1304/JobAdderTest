@@ -25,12 +25,7 @@ namespace JobAdderTest.Controllers
         [HttpGet("{id:int?}")]
         public IEnumerable<Job> Get(int? id = null)
         {
-            var results = _jobAdderService.GetJobs().Result;
-
-            if (id.HasValue)
-                return results.Where(j => j.JobId == id);
-
-            return results;
+            return _jobAdderService.GetJobs(id).Result;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace JobAdderTest.Models
 
         public string Name { get; set; }
 
-        public string SkillTags { get; set; }
+        public string SkillTags { internal get; set; }
 
         private List<string> _uniqueSkillTags = null;
         public List<string> UniqueSkillTags
@@ -25,5 +25,8 @@ namespace JobAdderTest.Models
                 return _uniqueSkillTags;
             }
         }
+
+
+
     }
 }
