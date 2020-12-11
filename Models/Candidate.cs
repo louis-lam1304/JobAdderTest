@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace JobAdderTest.Models
 {

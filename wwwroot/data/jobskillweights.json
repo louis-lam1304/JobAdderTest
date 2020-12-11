@@ -1,0 +1,292 @@
+[
+  {
+    "Name": "admin",
+    "Weight": 2,
+    "Common": true
+  },
+  {
+    "Name": "administration",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "advice",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "ahpra-registration",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "architecture",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "aws",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "branding",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "carpentry",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "cleanliness",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "clinical",
+    "Weight": 5,
+    "Common": true
+  },
+  {
+    "Name": "communication",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "confidence",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "cooking",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "creativity",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "data-entry",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "deliveries",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "dental-assisting",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "design",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "detail",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "driver-license",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "fastlane",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "hockey-app",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "housekeeping",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "hr",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "hygiene",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "iOS",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "illustrator",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "java",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "kotlin",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "maintenance",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "maturity",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "mobile",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "ms-office",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "multitasking",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "negotiation",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "networking",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "objective-c",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "ordering",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "organisation",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "outlook",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "patience",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "pharmaceutical",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "photoshop",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "placements",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "powerpoint",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "prescriptions",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "reception",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "recruiting",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "relationships",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "reliable",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "sales",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "service",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "spreadsheets",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "sterilisation",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "swift",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "washing",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "word",
+    "Weight": 1,
+    "Common": false
+  },
+  {
+    "Name": "xcode",
+    "Weight": 1,
+    "Common": false
+  }
+]

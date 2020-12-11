@@ -41,6 +41,6 @@ All this will come more fluidly with time and experience.
     - ordered by the algorithm decending.
     - visual helper: green skill tags for matching, red for no match
     
-Improvements
+### Improvements
 - [x] candidate skills tags has duplicate data, clean up, use another property.
 - [] make jobadder service url configurable per environment.

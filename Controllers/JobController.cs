@@ -10,7 +10,7 @@ using JobAdderTest.Services;
 namespace JobAdderTest.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class JobController : ControllerBase
     {
         private readonly ILogger<JobController> _logger;
