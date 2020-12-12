@@ -15,7 +15,7 @@ Pre-requisite:
 Below is my thought process / tasks I thought I might share on how I might tackle this problem. At this time, I've already conceptually thought on how to build the solution. 
 It's now a matter of learning and building. It will evolve over time and it probably won't be in order upon completion of this coding challenge. 
 
-Since this is my first ASP.NET Core Web Application w/ Angular project, in between these tasks are probably a lot of googling and reading articles on how to tackle said problem. 
+Since this is my first ASP.NET Core Web Application w/ Angular project, in between these tasks are probably a lot of googling and reading articles on how to tackle a problem. 
 All this will come more fluidly with time and experience.
 - start visual studio boilerplate project for ASP.NET Core Web Application/Angular project
 
@@ -53,10 +53,11 @@ Example following payload in the body
 - three major components
   - jobskillsweight modifer: allows a recruiter to change values of skills
   - jobs listing (left column)
-    - onclick action invokes algorithm to find best matched candidates
+    - onclick action invokes call to candidate match api to find best matched candidates
   - candidate listing (right column)
     - ordered by the algorithm decending.
     - visual helper: green skill tags for matching, red for no match
+    - show missing skills
     
 ### Potential Improvements
 - [x] candidate skills tags has duplicate data, clean up, use another property.
@@ -65,3 +66,6 @@ Example following payload in the body
 - [ ] remove candidates from match feed if jobWeight = 0
 - [ ] error catching on jobweightskill post feed.
 - [ ] remove weatherforecast code from boilerplate.
+- [ ] After reading (https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?view=aspnetcore-5.0), change controllers to be async.
+- [ ] Implement cache layer on jobskillweight service.
+- [ ] Move service calls from components to services files in angular

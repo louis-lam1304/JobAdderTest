@@ -35,7 +35,7 @@ namespace JobAdderTest.Controllers
         [HttpGet("match/{jobId}")]
         public IEnumerable<WeightedCandidate> GetMatch(int jobId)
         {
-            var job = _jobAdderService.GetJobs(jobId).Result.First();
+            var job = _jobAdderService.GetJobs(jobId).Result.FirstOrDefault();
 
             if (job == null) return new List<WeightedCandidate>();
 

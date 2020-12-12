@@ -1,0 +1,12 @@
+<p *ngIf="!candidates"><em>Loading...</em></p>
+<div class="list-group" *ngIf="candidates">
+  <a [routerLink]="" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let candidate of candidates">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ candidate.name }}</h5>
+      <span class="badge badge-primary badge-pill">{{ candidate.jobWeight }}</span>
+    </div>
+    <ul class="comma-list">
+      <li *ngFor="let skill of candidate.foundSkills"><small>{{ skill }}</small></li>
+    </ul>
+  </a>
+</div>
