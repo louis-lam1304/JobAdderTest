@@ -1,0 +1,13 @@
+.comma-list.skills li:first-child::before {
+  content: "Candidate skills: ";
+  font-size: 80%;
+  font-weight:bold;
+}
+
+.comma-list.missing li:first-child::before {
+  content: "Missing skills: ";
+  font-size: 80%;
+  font-weight: bold;
+}
+
+

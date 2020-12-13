@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using JobAdderTest.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace JobAdderTest.Services
 {
@@ -25,21 +24,19 @@ namespace JobAdderTest.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "jobskillweights.json"); }
         }
 
-        public IEnumerable<JobSkillWeight> GetJobSkillWeights()
+        public async Task<IEnumerable<JobSkillWeight>> GetJobSkillWeights()
         {
-            using (var jsonFileReader = File.OpenText(_jobSkillWeightsFile))
-            {
-                return System.Text.Json.JsonSerializer.Deserialize<JobSkillWeight[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-            }
+            using var reader = File.OpenRead(_jobSkillWeightsFile);
+            return await JsonSerializer.DeserializeAsync<JobSkillWeight[]>(reader,
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
         }
 
-        public void AdjustJobSkillWeight(JobSkillWeight jobSkillWeight)
+        public async Task AdjustJobSkillWeight(JobSkillWeight jobSkillWeight)
         {
-            var jobSkillWeights = GetJobSkillWeights();
+            var jobSkillWeights = await GetJobSkillWeights();
 
             var jsw = jobSkillWeights.FirstOrDefault(j => j.Name == jobSkillWeight.Name);
 
@@ -49,15 +46,9 @@ namespace JobAdderTest.Services
                 jsw.Common = jobSkillWeight.Common;
             }
 
-            using (var sw = File.CreateText(_jobSkillWeightsFile))
+            using (var fs = File.Create(_jobSkillWeightsFile))
             {
-                using (JsonWriter jw = new JsonTextWriter(sw))
-                {
-                    jw.Formatting = Formatting.Indented;
-
-                    var serializer = new Newtonsoft.Json.JsonSerializer();
-                    serializer.Serialize(jw, jobSkillWeights);
-                }
+                await JsonSerializer.SerializeAsync<IEnumerable<JobSkillWeight>>(fs, jobSkillWeights, new JsonSerializerOptions { WriteIndented = true });
             }
         }
 

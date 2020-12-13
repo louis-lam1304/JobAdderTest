@@ -23,18 +23,18 @@ namespace JobAdderTest.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<JobSkillWeight> Get()
+        public async Task<IEnumerable<JobSkillWeight>> Get()
         {
-            return _jobSkillWeightService.GetJobSkillWeights();
+            return await _jobSkillWeightService.GetJobSkillWeights();
         }
 
         [HttpPost("adjust")]
-        public ActionResult Adjust([FromBody] JobSkillWeight jobSkillWeightRequest)
+        public async Task<ActionResult> Adjust([FromBody] JobSkillWeight jobSkillWeightRequest)
         {
             try
             {
-                _jobSkillWeightService.AdjustJobSkillWeight(jobSkillWeightRequest);
-                return Ok("Saved");
+                await _jobSkillWeightService.AdjustJobSkillWeight(jobSkillWeightRequest);
+                return Ok(jobSkillWeightRequest);
             }
             catch (Exception e)
             {

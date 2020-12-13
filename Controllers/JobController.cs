@@ -23,9 +23,9 @@ namespace JobAdderTest.Controllers
         }
 
         [HttpGet("{id:int?}")]
-        public IEnumerable<Job> Get(int? id = null)
+        public async Task<IEnumerable<Job>> Get(int? id = null)
         {
-            return _jobAdderService.GetJobs(id).Result;
+            return await _jobAdderService.GetJobs(id);
         }
     }
 }

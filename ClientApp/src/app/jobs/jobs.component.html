@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <app-job-skill-weight></app-job-skill-weight>
+      <app-job-skill-weight (refreshEvent)="refresh($event);"></app-job-skill-weight>
       <p *ngIf="!jobs"><em>Loading...</em></p>
       <div class="list-group" *ngIf="jobs">
         <a [routerLink]="" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let job of jobs" (click)="showCandidateMatch(job)">
@@ -16,9 +16,8 @@
       </div>
     </div>
     <div class="col-8">
-      <app-candidate-match [jobId]="jobId"></app-candidate-match>
+      <app-candidate-match [jobId]="jobId" [refreshEvent]="refreshEvent"></app-candidate-match>
     </div>
-    
   </div>
 </div>
   

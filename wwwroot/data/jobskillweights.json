@@ -1,7 +1,7 @@
 [
   {
     "Name": "admin",
-    "Weight": 7,
+    "Weight": 3,
     "Common": true
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "Name": "aws",
-    "Weight": 1,
+    "Weight": 3,
     "Common": false
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "Name": "data-entry",
-    "Weight": 1,
+    "Weight": 5,
     "Common": false
   },
   {
@@ -136,7 +136,7 @@
   },
   {
     "Name": "java",
-    "Weight": 1,
+    "Weight": 15,
     "Common": false
   },
   {
@@ -181,7 +181,7 @@
   },
   {
     "Name": "objective-c",
-    "Weight": 1,
+    "Weight": 13,
     "Common": false
   },
   {

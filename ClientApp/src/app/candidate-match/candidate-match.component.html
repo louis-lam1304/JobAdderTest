@@ -1,11 +1,19 @@
-<p *ngIf="!candidates"><em>Loading...</em></p>
+<p *ngIf="!candidates && jobId !== 0"><em>Loading...</em></p>
+<p *ngIf="jobId == 0 && candidates">Select a job to find candidates</p>
 <div class="list-group" *ngIf="candidates">
   <a [routerLink]="" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let candidate of candidates">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><span class="badge badge-primary badge-pill">{{ candidate.jobWeight }}</span> {{ candidate.name }}</h5>
     </div>
-    <ul class="comma-list">
-      <li *ngFor="let skill of candidate.foundSkills"><small>{{ skill }}</small></li>
+    <ul class="comma-list skills">
+      <li *ngFor="let skill of candidate.uniqueSkillTags">
+        <small [ngClass]="{'badge badge-success': candidate.foundSkills.indexOf(skill)>=0}">{{ skill }}</small>
+      </li>
+    </ul>
+    <ul class="comma-list missing">
+      <li *ngFor="let skill of candidate.missingSkills">
+        <small>{{ skill }}</small>
+      </li>
     </ul>
   </a>
 </div>

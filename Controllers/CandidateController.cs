@@ -27,20 +27,21 @@ namespace JobAdderTest.Controllers
         }
 
         [HttpGet("{id:int?}")]
-        public IEnumerable<Candidate> Get(int? id = null)
+        public async Task<IEnumerable<Candidate>> Get(int? id = null)
         {
-            return _jobAdderService.GetCandidates(id).Result;
+            return await _jobAdderService.GetCandidates(id);
         }
 
         [HttpGet("match/{jobId}")]
-        public IEnumerable<WeightedCandidate> GetMatch(int jobId)
+        public async Task<IEnumerable<WeightedCandidate>> GetMatch(int jobId)
         {
-            var job = _jobAdderService.GetJobs(jobId).Result.FirstOrDefault();
+            var jobs = await _jobAdderService.GetJobs(jobId);
+            var job = jobs.FirstOrDefault();
 
             if (job == null) return new List<WeightedCandidate>();
 
-            var candidates = _jobAdderService.GetCandidates(null).Result;
-            var jw = _jobSkillWeightService.GetJobSkillWeights();
+            var candidates = await _jobAdderService.GetCandidates(null);
+            var jw = await _jobSkillWeightService.GetJobSkillWeights();
 
             var wc = candidates.Select(c => new WeightedCandidate(c)).ToList();
             wc.ForEach(c => 
@@ -48,6 +49,7 @@ namespace JobAdderTest.Controllers
                 _matchService.Calculate(job, c, jw);
             });
 
+            wc.RemoveAll(c => c.JobWeight <= 0);
             wc.Sort();
 
             return wc;

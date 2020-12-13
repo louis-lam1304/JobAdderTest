@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Job } from '../shared/models/job';
 
@@ -8,8 +8,10 @@ import { Job } from '../shared/models/job';
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit {
-  public jobs: Job[];
 
+  private refreshEvent: EventEmitter<boolean> = new EventEmitter();
+
+  public jobs: Job[];
   jobId = 0;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
@@ -21,8 +23,12 @@ export class JobsComponent implements OnInit {
   ngOnInit() {
   }
 
-  public showCandidateMatch(job) {
+  showCandidateMatch(job) {
     this.jobId = job.jobId;
+  }
+
+  refresh(event) {
+    this.refreshEvent.emit(event);
   }
 
 }

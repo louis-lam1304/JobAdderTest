@@ -56,16 +56,18 @@ Example following payload in the body
     - onclick action invokes call to candidate match api to find best matched candidates
   - candidate listing (right column)
     - ordered by the algorithm decending.
-    - visual helper: green skill tags for matching, red for no match
+    - visual helper: green skill tags for matching
     - show missing skills
     
 ### Potential Improvements
 - [x] candidate skills tags has duplicate data, clean up, use another property.
 - [ ] make jobadder service url configurable per environment.
 - [ ] generate jobskillweights.json dynamically if it does not exist.
-- [ ] remove candidates from match feed if jobWeight = 0
-- [ ] error catching on jobweightskill post feed.
+- [x] remove candidates from match feed if jobWeight = 0
+- [x] error catching on jobweightskill post feed.
 - [x] remove weatherforecast code from boilerplate.
-- [ ] After reading (https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?view=aspnetcore-5.0), change controllers to be async.
+- [x] After reading (https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?view=aspnetcore-5.0), change controllers to be async.
 - [ ] Implement cache layer on jobskillweight service.
 - [ ] Move service calls from components to services files in angular
+- [ ] create global config to manage potentially adjust scoring mechanisms
+- [ ] for mobile job candidate match view make left side collapsable 
