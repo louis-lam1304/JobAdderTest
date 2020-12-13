@@ -41,7 +41,7 @@
   },
   {
     "Name": "cleanliness",
-    "Weight": 1,
+    "Weight": 3,
     "Common": false
   },
   {
@@ -241,7 +241,7 @@
   },
   {
     "Name": "relationships",
-    "Weight": 1,
+    "Weight": 18,
     "Common": false
   },
   {
