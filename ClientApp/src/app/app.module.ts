@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { JobSkillWeightComponent } from './job-skill-weight/job-skill-weight.component';
 import { CandidateMatchComponent } from './candidate-match/candidate-match.component';
@@ -15,7 +13,6 @@ import { CandidateMatchComponent } from './candidate-match/candidate-match.compo
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
     JobsComponent,
     JobSkillWeightComponent,
     CandidateMatchComponent
@@ -25,8 +22,7 @@ import { CandidateMatchComponent } from './candidate-match/candidate-match.compo
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'jobs', component: JobsComponent }
+      { path: '', component: JobsComponent, pathMatch: 'full' },
     ])
   ],
   providers: [],
