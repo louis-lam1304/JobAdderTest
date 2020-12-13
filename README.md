@@ -23,6 +23,13 @@ Since this is my first ASP.NET Core Web Application w/ Angular project, in betwe
 All this will come more fluidly with time and experience.
 - start visual studio boilerplate project for ASP.NET Core Web Application/Angular project
 
+## Assumptions
+- Only implemented this for a single recruiter. Would need to create a sign up/login and have multiple jobskillweights.json file per registered recruiter.
+- Coding challenge said find a candidate. I decided just to list all candidates (excluding <= 0 JobWeight) descending based on their JobWeight.
+- Services calls are always up, I did not build for any failures from services.
+- No data validation on input when adjusting Job Skill Weights
+- Did not implement a caching layer. It would definitely help with performance and resilience of system if services go down.
+
 ## Matching Algoritm
 Very simple solution in which we intersect to Job Skills with the Candidate Skills and Sum up the tags. 
 We do have a JobSkillWeight object to allow recruiters to modify skills tags values if they feel some tags are worth higher than others.
@@ -98,3 +105,4 @@ Example following payload in the body
 - [ ] create global config to manage potentially adjust scoring mechanisms
 - [ ] for mobile: job candidate match view make left side collapsable 
 - [ ] add unit tests for MatchService Calculations
+- [ ] better visualization of what job has been selected, especially when you scroll down the list.

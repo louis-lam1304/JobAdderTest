@@ -24,6 +24,7 @@ export class JobsComponent implements OnInit {
   }
 
   showCandidateMatch(job) {
+    window.scroll(0, 0);
     this.jobId = job.jobId;
   }
 
