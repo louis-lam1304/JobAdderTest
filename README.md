@@ -65,7 +65,7 @@ Example following payload in the body
 - [ ] generate jobskillweights.json dynamically if it does not exist.
 - [ ] remove candidates from match feed if jobWeight = 0
 - [ ] error catching on jobweightskill post feed.
-- [ ] remove weatherforecast code from boilerplate.
+- [x] remove weatherforecast code from boilerplate.
 - [ ] After reading (https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?view=aspnetcore-5.0), change controllers to be async.
 - [ ] Implement cache layer on jobskillweight service.
 - [ ] Move service calls from components to services files in angular

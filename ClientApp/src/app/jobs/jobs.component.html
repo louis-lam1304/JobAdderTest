@@ -8,7 +8,7 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ job.name }}</h5>
           </div>
-          <p class="mb-1">{{ job.company }}</p>
+          <p class="mb-1">Company: {{ job.company }}</p>
           <ul class="comma-list">
             <li *ngFor="let skill of job.uniqueSkills"><small>{{ skill }}</small></li>
           </ul>

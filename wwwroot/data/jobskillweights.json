@@ -1,7 +1,7 @@
 [
   {
     "Name": "admin",
-    "Weight": 2,
+    "Weight": 7,
     "Common": true
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "Name": "cooking",
-    "Weight": 1,
+    "Weight": 20,
     "Common": false
   },
   {
@@ -81,8 +81,8 @@
   },
   {
     "Name": "dental-assisting",
-    "Weight": 1,
-    "Common": false
+    "Weight": 7,
+    "Common": true
   },
   {
     "Name": "design",
@@ -156,7 +156,7 @@
   },
   {
     "Name": "mobile",
-    "Weight": 1,
+    "Weight": 13,
     "Common": false
   },
   {

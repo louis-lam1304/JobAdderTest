@@ -13,16 +13,15 @@ export class JobsComponent implements OnInit {
   jobId = 0;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    console.log(baseUrl);
     http.get<Job[]>(baseUrl + 'api/job').subscribe(result => {
       this.jobs = result;
     }, error => console.error(error));
   }
+
   ngOnInit() {
   }
 
   public showCandidateMatch(job) {
-    console.log(job);
     this.jobId = job.jobId;
   }
 

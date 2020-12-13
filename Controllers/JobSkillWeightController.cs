@@ -31,9 +31,15 @@ namespace JobAdderTest.Controllers
         [HttpPost("adjust")]
         public ActionResult Adjust([FromBody] JobSkillWeight jobSkillWeightRequest)
         {
-            _jobSkillWeightService.AdjustJobSkillWeight(jobSkillWeightRequest);
-
-            return Ok();
+            try
+            {
+                _jobSkillWeightService.AdjustJobSkillWeight(jobSkillWeightRequest);
+                return Ok("Saved");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

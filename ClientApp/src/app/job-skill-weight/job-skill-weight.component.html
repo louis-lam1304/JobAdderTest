@@ -1,1 +1,15 @@
-<p>job-skill-weight works!</p>
+<div class="input-group mb-3" *ngIf="selectedJSW">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="jobWeightSelect">Job Skill</label>
+  </div>
+  <select class="custom-select" id="jobWeightSelect" [(ngModel)]="selectedJSW">
+    <option selected disabled>Choose...</option>
+    <option *ngFor="let jws of jobSkillWeights" [ngValue]="jws">{{ jws.name }}</option>
+  </select>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" placeholder="" aria-label="weight" aria-describedby="basic-addon2" [(ngModel)]="selectedJSW.weight" >
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="update()">Update</button>
+    </div>
+  </div>
+</div>
